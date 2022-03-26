@@ -1,0 +1,111 @@
+Immoweb ID
+Property type
+property sub-type
+Price
+Price (sr only)
+Post code
+Available as of
+Neighbourhood or locality
+Construction year
+Floor
+Number of floors
+Building condition
+Surroundings type
+Living area
+Living room surface
+Kitchen type
+Kitchen surface
+Bedrooms
+Bedroom 1 surface
+Bathrooms
+Toilets
+Furnished
+Terrace surface
+Caretaker
+Elevator
+Accessible for disabled people
+Visio phone
+Primary energy consumption
+Energy class
+Reference number of the EPC report
+CO₂ emission
+Yearly theoretical total energy consumption
+Heating type
+Double glazing
+Tenement building
+Address
+External reference
+url address
+Property name
+Number of frontages
+Basement
+Armored door
+Intercom
+As built plan
+Planning permission obtained
+Subdivision permit
+Possible priority purchase right
+Proceedings for breach of planning regulations
+Flood zone type
+Latest land use designation
+Office
+Available date
+Bedroom 2 surface
+Shower rooms
+Office surface
+Swimming pool
+Outdoor parking spaces
+Bedroom 3 surface
+Covered parking spaces
+Dining room
+How many fireplaces?
+Dressing room
+Laundry room
+Professional space
+Basement surface
+TV cable
+Terrace orientation
+Secure access / alarm
+Air conditioning
+Jacuzzi
+Sauna
+Internet
+Conformity certification for fuel tanks
+Heat pump
+Photovoltaic solar panels
+Thermic solar panels
+Common water heater
+Type of building
+Obligation to build
+Living room
+Street frontage width
+Total ground floor buildable
+Garden
+Garden orientation
+E-level (overall energy performance)
+Bedroom 4 surface
+Garden surface
+Attic surface
+Isolated
+Terrace
+Extra information
+Bedroom 5 surface
+Sea view
+Agent's name
+Single session
+Terms of visit
+Attic
+Number of annexes
+Professional space surface
+Surface of the plot
+Connection to sewer network
+Gas, water & electricity
+Land is facing street
+Flat land
+Current monthly revenue
+Wooded land
+Plot at rear
+Percentage rented
+EPC description
+Venue of the sale
+Date of the sale
