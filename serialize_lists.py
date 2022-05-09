@@ -1,3 +1,8 @@
+"""
+A helper module for reading files that scraping_with_selenium -module creates.
+
+"""
+
 import pickle
 import os
 
@@ -24,15 +29,14 @@ def read_dump(file_name: str) -> list:
 
 
 def merge_files():
+    """
+    Merges all the files in the folder into one file.
+    """
     all_files = os.listdir("./data/")
     merged_list = []
     for file_name in all_files:
-        if file_name.endswith('.attributes'):
+        if file_name.endswith(".attributes"):
             tmp_list = read_dump(f"./data/{file_name}")
             merged_list.append(tmp_list)
-    print("This should be 20:", len(merged_list))
     write_dump(merged_list, "./data/MERGED_LIST.NLTK")
     return merged_list
-
-
-#merge_files()

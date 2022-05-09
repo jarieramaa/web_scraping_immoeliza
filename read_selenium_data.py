@@ -1,13 +1,14 @@
 """
 This module is for reading files that scraping_with_selenium -module creates.
-This module can be used directly or used as an example
+It can be used directly or used as an example
 """
 from math import ceil
 import os
 import re
 
+import selenium_address
 
-#TODO Tähän pitäisi laittaa serialize_lists
+
 def read_file(filename: str) -> list:
     """
     'scraping_with_selenium' writes files with special format. This
@@ -83,4 +84,4 @@ def split_files(size: int, filename: str) -> None:
         selenium_address.Read_Address.write_dump(tmp_list, filename)
 
 
-#split_files(50, "HOUSE_TOWN_HOUSE.txt")
+# split_files(50, "HOUSE_TOWN_HOUSE.txt")

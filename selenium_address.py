@@ -1,19 +1,18 @@
-import time
-import os
+"""
+Reads the price information based on the web address
+"""
 
-from curses import KEY_DOWN, KEY_ENTER
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
+import time
 from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
 import read_selenium_data
-from threading import Thread, RLock
 import serialize_lists
 
 
-class Read_Address:
+class ReadAddress:
+    """
+    A Class that can be used to read the address and price from the website
+    """
 
     _driver = webdriver.Firefox()
 
@@ -30,26 +29,26 @@ class Read_Address:
         """
         prop_location = self._driver.find_elements(
             By.XPATH, '//div[@class="classified__information--address"]')
-        if prop_location == None or len(prop_location) == 0:
+        if prop_location is None or len(prop_location) == 0:
             return ""
         return prop_location[0].text
 
     def _read_price(self) -> str:
-        """ 
+        """
         Reads the price from the website
         :return: price as a string
         """
         prop_price_list = self._driver.find_elements(
             By.XPATH, '//p[@class="classified__price"]')  #.text.split("\n")
-        if prop_price_list == None or len(prop_price_list) == 0:
+        if prop_price_list is None or len(prop_price_list) == 0:
             return ""
         raw_prop_price = prop_price_list[0].text.split("\n")[0]
 
         return raw_prop_price
 
     def _accept_cookies(self) -> None:
-        """In the website has a dialog that ask us to accept cookies. We have to close 
-        it. Otherwise is will distract our search"""
+        """In the website has a dialog that ask us to accept cookies. We have to close
+        it. Otherwise is will distract the search"""
         time.sleep(5)
         button = self._driver.find_elements(By.XPATH,
                                             "//*[@id='uc-btn-accept-banner']")
@@ -61,7 +60,7 @@ class Read_Address:
         saves the file with same name, except with .pkl ending
         :name: Filename (including path)
         """
-        name = "HOUSE_CASTLE.txt"  #TODO Remove this line
+        #name = "HOUSE_CASTLE.txt"  #just for testing
         html_list = read_selenium_data.read_file(name)
         cookies_accepted = False
         for inner_list in html_list:
@@ -78,23 +77,5 @@ class Read_Address:
         name_base = name.split(".")
         new_name = "./data/" + name_base[0] + ".pkl"
         serialize_lists.write_dump(html_list, new_name)
-        Read_Address.driver.quit()
+        ReadAddress.driver.quit()
         print(html_list)
-
-
-#run_the_code()
-#driver.quit()
-
-#print(read_dump("HOUSE_CASTLE.pkl"))
-"""sample_list = [1, 2, 3, 4, 5]
-write_dump(sample_list, "./data/sample.pkl")
-print("toimiiko tää?", read_dump("./data/sample.pkl"))
-#driver.quit()"""
-
-#
-"""open_web_page(
-    "https://www.immoweb.be/en/classified/house/for-sale/ombret-rawsa/4540/9728478"
-)
-read_address()
-read_price()
-driver.quit()"""
