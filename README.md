@@ -19,9 +19,11 @@ The needed frameworks are:
 Please, read requirements.txt for further details
 
 ## Usage
+
 There actual data collection is done using following tools:
 
-#1. scraping\_with\_selenium.py#
+# 1. scraping\_with\_selenium.py
+
 Uses Selenium to collect links to the property ads from ImmoWeb-site. Selects 
 automaticly property type (house/apartment) and one out of 20 subtype (penthouse, 
 dublex, single etc). Futhermore the tool excludes the life annuity sales. The tool
@@ -32,7 +34,8 @@ the file is named accordingly (for ex. HOUSE\_VILLAS.txt). Tool is also creating
 that contains information how many properties was found and if there were any errors. When 
 the programn has finished html\_to\_attributes.py can be started
 
-#2. html\_to\_attributes.py#
+# 2. html\_to\_attributes.py
+
 This tool uses the links that were created by Selenium tool. It reads the files created by
 Selenium tool and by using BeautifulSoup downloads all the attributes for properties. Tool can be 
 started in terminal with command:
@@ -41,7 +44,8 @@ filename is one of those files that Selenium tool generated (for ex. python html
 Please, note that it's possible to open several terminal and load different files with the tool from there. The result 
 will be written to a binary files. 
 
-#3 file\_read\_example
+# 3. file\_read\_example
+
 This tool reads all the binary files, and modifies the data to proper format for machine learning. It also creates CSV file.
 
 ## Contributors
